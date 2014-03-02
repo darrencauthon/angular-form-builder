@@ -18,6 +18,7 @@ angular.module 'builder.components', ['builder', 'validator.rules']
         ]
         template:
             """
+            <div class="row" ng-show="newRow"></div>
             <div class="col-md-4 ">
                 <label for="{{formName+index}}" class="control-label" ng-class="{'fb-required':required}">{{label}}</label>
                 <div>
@@ -46,6 +47,11 @@ angular.module 'builder.components', ['builder', 'validator.rules']
                         <input type='checkbox' ng-model="required" />
                         Required</label>
                 </div>
+                <div class="checkbox">
+                    <label>
+                        <input type='checkbox' ng-model="newRow" />
+                        New Row?</label>
+                </div>
                 <div class="form-group" ng-if="validationOptions.length > 0">
                     <label class='control-label'>Validation</label>
                     <select ng-model="$parent.validation" class='form-control' ng-options="option.rule as option.label for option in validationOptions"></select>
@@ -71,6 +77,7 @@ angular.module 'builder.components', ['builder', 'validator.rules']
         required: no
         template:
             """
+            <div class="row" ng-show="newRow"></div>
             <div class="col-md-4">
                 <label for="{{formName+index}}" class="control-label" ng-class="{'fb-required':required}">{{label}}</label>
                 <div>
@@ -99,6 +106,11 @@ angular.module 'builder.components', ['builder', 'validator.rules']
                         <input type='checkbox' ng-model="required" />
                         Required</label>
                 </div>
+                <div class="checkbox">
+                    <label>
+                        <input type='checkbox' ng-model="newRow" />
+                        New Row?</label>
+                </div>
 
                 <hr/>
                 <div class='form-group'>
@@ -122,6 +134,7 @@ angular.module 'builder.components', ['builder', 'validator.rules']
         arrayToText: yes
         template:
             """
+            <div class="row" ng-show="newRow"></div>
             <div class="col-md-4">
                 <label for="{{formName+index}}" class="control-label" ng-class="{'fb-required':required}">{{label}}</label>
                 <div>
@@ -156,6 +169,11 @@ angular.module 'builder.components', ['builder', 'validator.rules']
                         Required
                     </label>
                 </div>
+                <div class="checkbox">
+                    <label>
+                        <input type='checkbox' ng-model="newRow" />
+                        New Row?</label>
+                </div>
 
                 <hr/>
                 <div class='form-group'>
@@ -178,6 +196,7 @@ angular.module 'builder.components', ['builder', 'validator.rules']
         options: ['value one', 'value two']
         template:
             """
+            <div class="row" ng-show="newRow"></div>
             <div class="col-md-4">
                 <label for="{{formName+index}}" class="control-label" ng-class="{'fb-required':required}">{{label}}</label>
                 <div>
@@ -205,6 +224,11 @@ angular.module 'builder.components', ['builder', 'validator.rules']
                     <label class='control-label'>Options</label>
                     <textarea class="form-control" rows="3" ng-model="optionsText"/>
                 </div>
+                <div class="checkbox">
+                    <label>
+                        <input type='checkbox' ng-model="newRow" />
+                        New Row?</label>
+                </div>
 
                 <hr/>
                 <div class='form-group'>
@@ -227,6 +251,7 @@ angular.module 'builder.components', ['builder', 'validator.rules']
         options: ['value one', 'value two']
         template:
             """
+            <div class="row" ng-show="newRow"></div>
             <div class="col-md-4">
                 <label for="{{formName+index}}" class="control-label">{{label}}</label>
                 <div>
@@ -250,6 +275,11 @@ angular.module 'builder.components', ['builder', 'validator.rules']
                 <div class="form-group">
                     <label class='control-label'>Options</label>
                     <textarea class="form-control" rows="3" ng-model="optionsText"/>
+                </div>
+                <div class="checkbox">
+                    <label>
+                        <input type='checkbox' ng-model="newRow" />
+                        New Row?</label>
                 </div>
 
                 <hr/>
