@@ -976,7 +976,7 @@
       return result;
     };
     this.convertFormObject = function(name, formObject) {
-      var component, exist, form, result, _i, _len, _ref, _ref1, _ref2, _ref3, _ref4, _ref5, _ref6, _ref7, _ref8, _ref9;
+      var component, exist, form, result, _i, _len, _ref, _ref1, _ref10, _ref2, _ref3, _ref4, _ref5, _ref6, _ref7, _ref8, _ref9;
       if (formObject == null) {
         formObject = {};
       }
@@ -1010,7 +1010,8 @@
         placeholder: (_ref6 = formObject.placeholder) != null ? _ref6 : component.placeholder,
         options: (_ref7 = formObject.options) != null ? _ref7 : component.options,
         required: (_ref8 = formObject.required) != null ? _ref8 : component.required,
-        validation: (_ref9 = formObject.validation) != null ? _ref9 : component.validation
+        validation: (_ref9 = formObject.validation) != null ? _ref9 : component.validation,
+        newRow: (_ref10 = formObject.newRow) != null ? _ref10 : component.newRow
       };
       return result;
     };
