@@ -49,6 +49,7 @@ angular.module 'builder.provider', []
             arrayToText: component.arrayToText ? no
             template: component.template
             popoverTemplate: component.popoverTemplate
+            newRow: component.newRow
         if not result.template then console.error "The template is empty."
         if not result.popoverTemplate then console.error "The popoverTemplate is empty."
         result
@@ -103,6 +104,7 @@ angular.module 'builder.provider', []
             arrayToText: {bool} checkbox could use this to convert input (default is no)
             template: {string} html template
             popoverTemplate: {string} html template
+            newRow: {bool} Should the form object be put on a new line?
         ###
         if not @components[name]?
             # regist the new component

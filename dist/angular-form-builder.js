@@ -31,13 +31,14 @@
         var component;
         copyObjectToScope(formObject, $scope);
         $scope.optionsText = formObject.options.join('\n');
-        $scope.$watch('[label, description, placeholder, required, options, validation]', function() {
+        $scope.$watch('[label, description, placeholder, required, options, validation, newRow]', function() {
           formObject.label = $scope.label;
           formObject.description = $scope.description;
           formObject.placeholder = $scope.placeholder;
           formObject.required = $scope.required;
           formObject.options = $scope.options;
-          return formObject.validation = $scope.validation;
+          formObject.validation = $scope.validation;
+          return formObject.newRow = $scope.newRow;
         }, true);
         $scope.$watch('optionsText', function(text) {
           var x;
@@ -71,7 +72,8 @@
             placeholder: $scope.placeholder,
             required: $scope.required,
             optionsText: $scope.optionsText,
-            validation: $scope.validation
+            validation: $scope.validation,
+            newRow: $scope.newRow
           };
         },
         rollback: function() {
@@ -87,7 +89,8 @@
           $scope.placeholder = this.model.placeholder;
           $scope.required = this.model.required;
           $scope.optionsText = this.model.optionsText;
-          return $scope.validation = this.model.validation;
+          $scope.validation = this.model.validation;
+          return $scope.newRow = this.model.newRow;
         }
       };
     }
@@ -965,7 +968,8 @@
         options: (_ref8 = component.options) != null ? _ref8 : [],
         arrayToText: (_ref9 = component.arrayToText) != null ? _ref9 : false,
         template: component.template,
-        popoverTemplate: component.popoverTemplate
+        popoverTemplate: component.popoverTemplate,
+        newRow: component.newRow
       };
       if (!result.template) {
         console.error("The template is empty.");
@@ -1047,6 +1051,7 @@
             arrayToText: {bool} checkbox could use this to convert input (default is no)
             template: {string} html template
             popoverTemplate: {string} html template
+            newRow: {bool} Should the form object be put on a new line?
          */
         if (_this.components[name] == null) {
           newComponent = _this.convertComponent(name, component);
