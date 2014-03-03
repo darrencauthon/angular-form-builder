@@ -49,7 +49,7 @@ angular.module 'builder.provider', []
             arrayToText: component.arrayToText ? no
             template: component.template
             popoverTemplate: component.popoverTemplate
-            newRow: component.newRow
+            expand: component.expand
         if not result.template then console.error "The template is empty."
         if not result.popoverTemplate then console.error "The popoverTemplate is empty."
         result
@@ -75,7 +75,7 @@ angular.module 'builder.provider', []
             options: formObject.options ? component.options
             required: formObject.required ? component.required
             validation: formObject.validation ? component.validation
-            newRow: formObject.newRow ? component.newRow
+            expand: formObject.expand ? component.expand
         result
 
     @reindexFormObject = (name) =>
@@ -104,7 +104,7 @@ angular.module 'builder.provider', []
             arrayToText: {bool} checkbox could use this to convert input (default is no)
             template: {string} html template
             popoverTemplate: {string} html template
-            newRow: {bool} Should the form object be put on a new line?
+            expand: {bool} Should the form object be expanded to a full line?
         ###
         if not @components[name]?
             # regist the new component

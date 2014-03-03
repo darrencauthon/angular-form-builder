@@ -13,7 +13,7 @@
         "options": [],
         "required": false,
         "validation": "/.*/",
-        newRow: true
+        expand: true
       }, {
         "id": 3,
         "component": "textArea",
@@ -25,7 +25,7 @@
         "options": [],
         "required": false,
         "validation": "/.*/",
-        newRow: true
+        expand: true
       }, {
         "id": 4,
         "component": "checkbox",
@@ -37,7 +37,7 @@
         "options": ["value one", "value two"],
         "required": false,
         "validation": "/.*/",
-        newRow: true
+        expand: true
       }, {
         "id": 5,
         "component": "radio",
@@ -49,7 +49,7 @@
         "options": ["value one", "value two"],
         "required": false,
         "validation": "/.*/",
-        newRow: true
+        expand: true
       }, {
         "id": 6,
         "component": "select",
@@ -61,7 +61,7 @@
         "options": ["value one", "value two"],
         "required": false,
         "validation": "/.*/",
-        newRow: true
+        expand: true
       }
     ];
     for (_i = 0, _len = data.length; _i < _len; _i++) {
@@ -73,7 +73,7 @@
         placeholder: item.placeholder,
         required: item.required,
         editable: true,
-        newRow: item.newRow
+        expand: item.expand
       });
     }
     $scope.form = $builder.forms['default'];

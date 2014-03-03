@@ -34,14 +34,14 @@ angular.module 'builder.controller', ['builder.provider']
 
         $scope.optionsText = formObject.options.join '\n'
 
-        $scope.$watch '[label, description, placeholder, required, options, validation, newRow]', ->
+        $scope.$watch '[label, description, placeholder, required, options, validation, expand]', ->
             formObject.label = $scope.label
             formObject.description = $scope.description
             formObject.placeholder = $scope.placeholder
             formObject.required = $scope.required
             formObject.options = $scope.options
             formObject.validation = $scope.validation
-            formObject.newRow = $scope.newRow
+            formObject.expand = $scope.expand
         , yes
 
         $scope.$watch 'optionsText', (text) ->
@@ -64,7 +64,7 @@ angular.module 'builder.controller', ['builder.provider']
                 required: $scope.required
                 optionsText: $scope.optionsText
                 validation: $scope.validation
-                newRow: $scope.newRow
+                expand: $scope.expand
         rollback: ->
             ###
             Rollback input value.
@@ -76,7 +76,7 @@ angular.module 'builder.controller', ['builder.provider']
             $scope.required = @model.required
             $scope.optionsText = @model.optionsText
             $scope.validation = @model.validation
-            $scope.newRow = @model.newRow
+            $scope.expand = @model.expand
 ]
 
 
