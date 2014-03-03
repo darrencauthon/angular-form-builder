@@ -12,7 +12,8 @@
         "placeholder": "placeholder",
         "options": [],
         "required": false,
-        "validation": "/.*/"
+        "validation": "/.*/",
+        newRow: true
       }, {
         "id": 3,
         "component": "textArea",
@@ -23,7 +24,8 @@
         "placeholder": "placeholder",
         "options": [],
         "required": false,
-        "validation": "/.*/"
+        "validation": "/.*/",
+        newRow: true
       }, {
         "id": 4,
         "component": "checkbox",
@@ -34,7 +36,8 @@
         "placeholder": "placeholder",
         "options": ["value one", "value two"],
         "required": false,
-        "validation": "/.*/"
+        "validation": "/.*/",
+        newRow: true
       }, {
         "id": 5,
         "component": "radio",
@@ -45,7 +48,8 @@
         "placeholder": "placeholder",
         "options": ["value one", "value two"],
         "required": false,
-        "validation": "/.*/"
+        "validation": "/.*/",
+        newRow: true
       }, {
         "id": 6,
         "component": "select",
@@ -56,7 +60,8 @@
         "placeholder": "placeholder",
         "options": ["value one", "value two"],
         "required": false,
-        "validation": "/.*/"
+        "validation": "/.*/",
+        newRow: true
       }
     ];
     for (_i = 0, _len = data.length; _i < _len; _i++) {
